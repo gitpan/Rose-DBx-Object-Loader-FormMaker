@@ -1,7 +1,6 @@
 package Rose::DBx::Object::Loader::FormMaker;
 
 use strict;
-use warnings;
 
 use Rose::DB::Object::Loader;
 use Carp;
@@ -11,19 +10,17 @@ use File::Spec;
 use Rose::Object::MakeMethods::Generic (
   scalar => ['base_tabindex']
 );
+our $VERSION = '0.02';
+
 BEGIN { our @ISA = qw(Rose::DB::Object::Loader) }
 
 =head1 NAME
 
-Rose::DB::Object::Loader::FormMaker - Automatically create RHTMLO forms for RDBO Objects
+Rose::DBx::Object::Loader::FormMaker - Automatically create RHTMLO Forms with the RDBO Loader
 
-=head1 VERSION
+=head1 SYNOPSIS
 
-version 0.01
-
-=cut
-
-our $VERSION = '0.01';
+hi there
 
 =head2 B<make_modules [PARAMS]>
 
@@ -253,3 +250,5 @@ sub form_base_classes {
     return wantarray ? @$bc : $bc;
 
 }
+
+1;
